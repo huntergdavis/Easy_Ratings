@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<com.google.ads.AdView android:id="@+id/adView"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_alignParentTop="true" ads:adUnitId="a14e1499d68278d"
+		ads:adSize="BANNER" ads:loadAdOnCreate="false" />
+
+	<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/scroll" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical" android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+			<TableRow android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:id="@+id/categoryrow" android:visibility="visible">
+
+				<TextView android:text="Select Category:" android:id="@+id/categorytext"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:layout_weight="1"></TextView>
+				<Spinner android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:id="@+id/categories"
+					android:layout_weight="1">
+				</Spinner>
+			</TableRow>
+			<TableRow android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:id="@+id/topbuttons" android:visibility="visible">
+
+				<Button android:id="@+id/newrow" android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:enabled="true"
+					android:text="New Category" />
+				<Button android:id="@+id/delete" android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:enabled="false"
+					android:text="Delete Selected Category" />
+			</TableRow>
+
+
+			<TableRow android:orientation="horizontal"
+				android:layout_alignParentLeft="true" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:id="@+id/galleryPlusRow"
+				android:visibility="visible" android:gravity="center_horizontal"
+			 android:layout_gravity="fill_horizontal|bottom">
+
+				<Gallery android:id="@+id/photoInventory"
+					android:layout_width="fill_parent" android:layout_height="wrap_content" />
+			</TableRow>
+			<TableRow android:orientation="horizontal"
+				android:layout_alignParentLeft="true" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:id="@+id/deleteItemRow"
+				android:visibility="visible" 
+				android:layout_gravity="fill_horizontal|bottom">
+				<Button android:id="@+id/plusbutton" android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:text="*New"
+					android:enabled="false" />
+				<Button android:id="@+id/deleteItembutton"
+					android:layout_height="wrap_content" android:layout_width="wrap_content"
+					android:text="Delete" android:enabled="false" />
+				<EditText android:id="@+id/ItemName" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:text="Item Name"
+					android:layout_above="@+id/adView" android:enabled="false" />
+			</TableRow>
+			<RatingBar android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:id="@+id/ratingBar1"
+				android:enabled="false"></RatingBar>
+			<TextView android:id="@+id/ImageName" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="Touch Image To Select Photo"
+				android:layout_above="@+id/adView" android:enabled="false" />
+			<ImageView android:id="@+id/ImageView01"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:enabled="false" />
+			<EditText android:layout_width="fill_parent" android:id="@+id/extracontent"
+				android:text="Extra Content" android:lines="10" android:gravity="top|left"
+				android:layout_height="wrap_content" android:enabled="false"></EditText>
+
+
+
+
+
+
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>
